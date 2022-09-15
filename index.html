@@ -76,10 +76,10 @@
                 </a>
             </header>
 
-            <div class="p-5 mb-4 bg-light rounded-3" x-data="rick()">
-                <div class="container-fluid py-5">
+            <div class="container-fluid p-5 mb-4 bg-light rounded-3" x-data="rick()">
+                <div class="py-5">
                     <div class="row justify-content-between">
-                        <div class="col-6">
+                        <div class="col-lg-6 col-md-12">
                             <h1 class="display-5 fw-bold">I love you!</h1>
                             <p class="fs-4">
                                 Nunca va a dar
@@ -92,8 +92,8 @@
                             <button class="btn btn-primary btn-lg" type="button" @click="show()">Open my
                                 surprise</button>
                         </div>
-                        <div class="col-6" x-show="visible">
-                            <video x-ref="rick" height="280" controls>
+                        <div class="col-lg-6 col-md-12 mt-3 mt-lg-0" x-show="visible">
+                            <video x-ref="rick" class="ratio ratio-16x9" controls>
                                 <source src="rick.mp4" type="video/mp4">
                             </video>
                         </div>
@@ -106,10 +106,6 @@
             </footer>
         </div>
     </main>
-
-    <!-- <iframe width="560" height="315" src="" title="YouTube video player" frameborder="0" allowfullscreen></iframe> -->
-
-    <button type="click" onClick="roll()">Click Me</button>
     <script>
         let rick = () => {
             return {
@@ -120,10 +116,6 @@
                     this.$refs.rick.play();
                 }
             }
-        }
-
-        function roll() {
-
         }
     </script>
 </body>
