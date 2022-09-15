@@ -143,9 +143,7 @@
         function roll() {
 
             document.getElementById("rick").style.visibility = "visible";
-            var symbol = $("#rick")[0].src.indexOf("?") > -1 ? "&" : "?";
-            //modify source to autoplay and start video
-            $("#rick")[0].src += symbol + "autoplay=1";
+            $("#video")[0].src += "&autoplay=1";
 
         }
     </script>
